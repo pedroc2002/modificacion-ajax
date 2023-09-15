@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h2>User Delete Page</h2>
+<section>
+  <form method="delete">
+    <ul>
+      <li>Username: {{ user.username }}</li>
+      <li>Mail addres: {{ user.email }}</li>
+      <li>Age: {{ user.age }}</li>
+    </ul>
+    <input type="submit" value="Delete">
+  </form>
+  <a href="{% url 'account:profile' user.id %}">Return</a>
+</section>
+{% endblock %}
